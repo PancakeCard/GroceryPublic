@@ -1,0 +1,32 @@
+%参考文献管理,bibtex
+\documentclass{ctexart}
+
+%注意每次换样式要清理辅助文件，工具——清理辅助文件。
+%除本文内容外，教程还提到了新的TEX参考文献排版引擎——biber，其支持本地化排版。
+
+%排版格式
+%\usepackage[round]{natbib}
+
+%参考文献样式
+\bibliographystyle{plain}%plain unsrt alpha abbrv
+
+\begin{document}
+	\section{一次管理——正文}
+	形状匹配通常有特征提取、相似性度量和度量学习三个步骤的内容\cite{key1}
+	
+	大数据为地图学带来新的研究内容\cite{key2}
+	%一次管理，一次实现
+	\begin{thebibliography}{99}
+		\bibitem{key1}周瑜,刘俊涛,白翔.\emph{形状匹配方法研究与展望}[J].自动化学报,2012,38(06):889-910.
+		
+		\bibitem{key2}艾廷华.大数据驱动下的地图学发展[J].测绘地理信息,2016,41(02):1-7.
+	\end{thebibliography}
+
+	%可用Google Scholar、Zotero浏览器插件(用于知网文献导出)等便于得到bib文件	
+	\section{bib文件文献——正文}
+	这里为使用bib文件进行引用，具体格式可能需要再调整
+	this is a paper cite by bib file\cite{Ai2007}.
+	
+	%参考文献路径
+	\bibliography{reference/test.bib}
+\end{document}

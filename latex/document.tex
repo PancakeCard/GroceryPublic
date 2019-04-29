@@ -1,0 +1,45 @@
+%文章结构
+
+%导言区(全局设置)
+%\documentclass{article}
+\documentclass{ctexart}
+
+%\usepackage{ctex}%中文支持
+\newcommand\degree{^\circ}%自定义命令，用于支持下面的\degree命令
+\title{文件基本结构}
+\author{ZJB}
+\date{\today}
+
+%===全局格式设置===
+\ctexset{
+	section={
+		format+=\zihao{-4} \heiti \raggedright,
+		name={,、},
+		beforeskip=1ex plus 0.2ex minus .2ex,
+		afterskip=1ex plus 0.2ex minus .2ex,
+		aftername=\hspace{0pt},
+		number=\chinese{section}
+	}
+}
+
+%正文区
+\begin{document}
+	%使标题信息生效
+	\maketitle
+	%目录
+	%\tableofcontents
+	%文章提纲
+	\section{背景}
+	LaTeX（LATEX，音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特在20世纪80年代初期开发，\\*****{$\backslash\backslash$}换行*****利用这种格式，即使使用者没有排版和程序设计的知识也可以充分发挥由TeX所提供的强大功能，能在几天，甚至几小时内生成很多具有书籍质量的印刷品。
+	
+	*****空行分段*****对于生成复杂表格和数学公式，这一点表现得尤为突出。\par *****{$\backslash$}par分段*****因此它非常适用于生成高印刷质量的科技和数学类文档。这个系统同样适用于生成从简单的信件到完整书籍的所有其他种类的文档。
+	
+	\section{方法}
+	\subsection{方法一}
+	\subsubsection{条件一}
+	\section{结果}
+	\subsection{数据}
+	\subsection{图表}
+	\section{结论}
+	\section{引文}
+\end{document}

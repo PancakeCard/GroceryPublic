@@ -1,0 +1,152 @@
+%笔记
+%一个latex只能有一个document环境,即\begin{环境}
+%空行为换行
+%处理中文要求文档为UTF-8格式
+%ctex宏包说明>texdoc ctex
+%简单教程>texdoc lshort-zh
+%texstudio ctrl+T注释，ctrl+U取消注释
+
+
+%导言区(全局设置)
+\documentclass{article}
+%\documentclass{ctexart}
+%\documentclass[10pt]{article}
+%article,book,report,letter|ctexart
+%10pt是参数，表示normal字体大小
+\usepackage{ctex}%中文支持
+\newcommand\degree{^\circ}%自定义命令，用于支持下面的\degree命令
+\title{文件基本结构}
+\author{ZJB}
+\date{\today}
+
+%正文区
+\begin{document}
+	%使标题信息生效
+	\maketitle
+	%普通文本
+	Hello world!
+	
+	你好，\LaTeX！
+	
+	%行内公式
+	inline formula, $f(x)=3x^2+x-1$,$g(x)=\frac{1}{2}x$ and so on.
+	
+	%块公式
+	block formula,$$\tanh(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}$$.
+	
+	%带编号公式
+	%degree自定义命令
+	\begin{equation}
+	AB^2=BC^2+AC^2,\angle C=90\degree
+	\end{equation}
+	
+	%字体部分，大括号可以约束范围
+	%字体族设置(罗马字体、无衬线字体、打字机字体)
+	\textrm{Roman Family}
+	\textsf{Sans Serif Family}
+	\texttt{Typewriter Family}
+	
+	{\rmfamily Roman Family}
+	{\sffamily Sans Serif Family}
+	\ttfamily Typewriter Family
+	
+	The next paragraph is Typewriter Family too.
+	\rmfamily%不限制范围影响后续文本
+	
+	%字体形状(直立、斜体、伪斜体、小型大写)
+	\textup{Upright Shape} \textit{Italic Shape} \textsl{Slanted Shape} \textsc{Small Caps Shape}
+	
+	{\upshape Upright Shape} {\itshape Italic Shape} {\slshape Slanted Shape} {\scshape Small Caps Shape}
+	
+	%字体设置(粗细、宽度)
+	\textmd{Medium Series}
+	\textbf{Boldface Series}
+	
+	{\mdseries Medium Series}
+	{\bfseries Boldface Series}
+	
+	%中文字体,需要ctex宏包
+	{\songti 宋体} \quad {\heiti 黑体} \quad {\fangsong 仿宋} \quad {\kaishu 楷书}
+	
+	中文\textbf{粗体}和\textit{斜体}
+	
+	%字体大小
+ 	{\tiny 	        Hello}
+	{\scriptsize    Hello}
+	{\footnotesize  Hello}
+	{\small         Hello}
+	{\normalsize    Hello}
+	{\large         Hello}
+	{\LARGE         Hello}
+	{\huge          Hello}
+	{\Huge          Hello}
+	
+	%中文字大小
+	调整前
+	\zihao{4}
+	调整后
+	\zihao{5}
+	调整回
+	
+	\newpage
+	%特殊字符
+	\section{空白符号}
+	Multiple spaces is same as              one;
+	
+	中文内的空                          格不显示；
+	
+	中英混排时chinese and english之间自动插入空格；
+	
+	
+	
+	多个空行等同于一个；
+	
+	自动缩进，不能用空格代替；
+	
+	手动空格用下列语句：
+	
+	%参考字符
+	一二三四五六七
+	
+	%1em
+	啊\quad 啊quad
+	
+	%2em
+	啊\qquad 啊qquad
+	
+	%1/6em
+	啊\thinspace 啊\,啊thinspace
+	
+	%0.5em
+	啊\enspace 啊enspace
+	
+	%空格
+	啊\ \ 啊\ 空格*2
+	
+	%手动设置
+	啊\kern 1em 啊kern
+	
+	啊\hskip 1em 啊hskip
+	
+	啊\hskip 2em 啊hskip
+	
+	%占位宽度
+	啊\hphantom{xyz} 啊hphantom
+	
+	%弹性长度
+	啊\hfill 啊hfill
+	\section{控制符}
+	\# \$ \% \{ \} \~{} \_{} \^{} \textbackslash \&
+	\section{排版符号}
+	\S \P \dag \ddag \copyright \pounds
+	\section{\TeX 标志符号}
+	\TeX{} \LaTeX{} \LaTeXe{}
+	\section{引号}
+	` ' `` ''
+	\section{连字符}
+	- -- ---
+	\section{非英文字符}
+	\oe \OE \ae \AE \aa \AA \o \O \l \L \ss \SS !` ?`
+	\section{重音符号(o为例)}
+	\`o \'o \^o \''o \~o \=o \.o \u{o} \v{o} \H{o} \r{o} \t{o} \b{o} \c{o} \d{o}
+\end{document}
