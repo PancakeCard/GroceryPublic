@@ -10,3 +10,6 @@ https://www.jianshu.com/p/59c19964ebb2
 
 # visual
 可视化相关
+
+# 备注
+* 预览HTML文件。在你github中的html文件的地址前面加上 http://htmlpreview.github.com/?
